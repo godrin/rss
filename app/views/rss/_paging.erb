@@ -1,0 +1,11 @@
+<% if pages>0 %>
+  <% 1.upto(pages){|page| %>
+    <% if current.to_i==page-1 %>
+      <%=page%>
+    <% else %>
+      <% link_to :page=>page-1,:url=>url do%>
+        <%=page%>
+      <% end %>
+    <% end %>
+  <% } %>
+<% end %>

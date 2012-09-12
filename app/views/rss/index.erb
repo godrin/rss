@@ -1,0 +1,35 @@
+<%=link_to "Logout", :controller=>'users', :action=>"sign_out"%>
+<br>
+
+Home:
+      <%=link_to("Home of "+@userEntity.name,:action=>:single_site,:url=>@userEntity.name)%>
+<br>
+<br>
+Current feeds:
+<ul>
+<% @feeds.each{|feed| %>
+  <li>
+  <a href='<%=feed.url%>'><%=feed.name%></a>
+  <%=feed.description%>
+  <%=button_to "Update", :action=>"update", :url=>feed.url%>
+  
+  <%= link_to(feed.name,:action=>:single_site,:url=>feed.url)%>
+  <ul>
+  <%feed.newsItems.each{|news| %>
+    <li>
+      <%=link_to(news.name,:action=>:item,:urlrss=>feed.url,:url=>news.url)%>
+    </li>
+  <% } %>
+  </ul>
+  </li>
+  
+<% } %>
+</ul>
+
+
+<br>
+Add new:
+<%= render :partial => "add_url" %>
+
+Upload:
+<%= render :partial => "upload" %>

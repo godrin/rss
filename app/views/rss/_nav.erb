@@ -1,0 +1,7 @@
+<div class='nav'>
+  <% @navis.each{|k,v| %>
+    <div class='nav_item'>
+      <%= link_to k,:action=>v%>
+    </div>
+  <% } %>
+</div>

@@ -1,0 +1,19 @@
+<% max=10 %>
+My Tags:<br>
+<div class='tag_list'>
+  <% tags[0...max].each{|tag| %>
+    <div class='tag'>
+      <%=tag.name%>
+    </div>
+  <% } %>
+  <% if tags.length>max %>
+     MORE
+  <% end %>
+</div>
+<br />
+All Tags:
+
+Friends Tags:
+
+Suggested Tags:
+..

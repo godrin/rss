@@ -1,0 +1,32 @@
+<div class='list_item<%=
+" read_list_item" if site.read_by?(@userEntity)
+%>'>
+  <div class='time'>
+    <%= site.time %><br>
+    <%= render_partial :partial=>"valued_new", :locals=>{:site=>site,:watcher=>@userEntity,:before=>@site,:size=>8}%>
+    <br>
+  </div>
+  <div class='icon'>
+    <img src="/images/<%=site.imageName%>"/>
+  </div>
+  <div class='head'>
+    <%=link_to(site.name,:action=>'single_site',:url=>site.url)%>
+    <% if site.author %>
+    (<%=site.author%>)
+    <% end %>
+    <% if site.state %>
+      (<%=site.state%>)
+    <% end %>
+    <% if site.is_a?(Feed)  %>
+      [<%=site.unreadNewsItems(@userEntity).length%> of <%=site.newsItems.length%>]
+    <% end %>
+    <% if site.read_by?(@userEntity) %>
+      <% link_to(:action=>:unread,:url=>site.url,:before=>@site.url) do %>
+        <img width="16" height="16" src="/images/glasses.png"/>
+      <% end %>
+    <% end %>
+  </div>
+  <div  class='body'>
+    <%=site.shortDescription%>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+  <% max=@maxPerPage %>
+  <% list[0...max].each{|item| %>
+    <%= render :partial => "list_item",:locals=>{:site=>item} %>
+  <% } %>
+<% if @pages>1 %>
+  <%= render :partial=> 'paging', :locals=>{:pages=>@pages, :url=>@site.url, :current=>@page} %>
+NEXT PAGE _ FIXME
+<% end %>

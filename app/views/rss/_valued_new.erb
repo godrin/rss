@@ -1,0 +1,13 @@
+<%
+  # parameters: site,watcher,before,size 
+  values=5
+  size||=16
+  perstar=4 #(0,25,50,75)
+  value=site.value_for(watcher)
+  0.upto(values-1) {|i| 
+    rest=[0,value.value*values-i,1].sort[1]
+    image="star"+((rest*(perstar)).to_i*100/(perstar)).to_s+".png"
+    link_to(:action=>:value,:before=>before.url,:url=>site.url,:value=>(i.to_f/(values-1))) do
+
+      %><img width='<%=size%>' height='<%=size%>' src="/images/<%=image%>"/><% end %>
+<% } %>(<%=value.count%>)
