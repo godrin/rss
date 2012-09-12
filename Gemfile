@@ -24,7 +24,8 @@ gem 'jquery-rails'
 
 gem 'devise'
 gem 'delayed_job_active_record'
-
+gem 'opml'
+gem 'hpricot'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

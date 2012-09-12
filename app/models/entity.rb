@@ -12,6 +12,8 @@ class Entity < ActiveRecord::Base
 
   has_many :readers, :through=>:readerAssigns
   has_many :readables, :through=>:readableAssigns
+
+  attr_accessible :name, :url
   def initialize(*args)
     super
     self.publication=Time.now
