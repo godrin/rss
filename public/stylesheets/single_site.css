@@ -1,0 +1,89 @@
+h2 {
+  clear:left;
+  background-color:#FFaa00;
+  padding:3px;
+}
+h2 a {
+	color:black;
+	text-decoration:none;
+	background-color:#EE9900;
+	padding:0px 4px 0px 4px;
+	border:1px groove #EE9900;
+}
+
+div.controls {
+	position:absolute;
+	right:20px;
+	width:20em;
+	background-color:#EE9900;
+	border:1px groove #EE9900;
+	font-size:10pt;
+	padding:3px;
+}
+
+div.slash_head {
+	float:left;
+	height:32px;
+	width:32x;
+		}
+
+div.children_head {
+	background-color:#FFAA00;
+	float:left;
+	height:27px;
+	width:200px;
+	padding-top:5px;
+	padding-left:5px;
+}
+
+div.parents_head {
+	background-color:#ee9900;
+	float:left;
+	height:27px;
+	width:200px;
+	padding-top:5px;
+	padding-left:5px;
+}
+
+div.selector {
+	height:32px;
+	width:33em;
+	background-color:#ee9900;
+}
+
+div#children {
+	width:33em;
+	padding:5px;
+	background-color:#FFAA00;
+/*	height:10em;
+	overflow:scroll;
+	*/
+	border-color:#FFAA00;
+}
+div#parents {
+	width:33em;
+	padding:5px;
+	background-color:#EE9900;
+}
+
+div.site_content {
+	border:groove #EE9900 4px;
+	width:33em;
+	margin:5px;
+	padding:2px;
+}
+
+div.tag_list {
+	width:40em;
+	text-align:justify;
+	display:inline-block;
+	}
+
+div.tag {
+	display:inline-block;
+	background-color:#DD8800;
+	border-color:DD8800;
+	border-width:2px;
+	border-style:groove;
+	margin:2px;
+}

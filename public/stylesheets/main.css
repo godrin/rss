@@ -1,0 +1,49 @@
+@import "main_layout.css";
+@import "single_site.css";
+@import "user_info.css";
+
+p
+{
+ width:50em;
+}
+
+div.list_item {
+  //border: 1px #7777FF solid;
+  background-color:#ffffAA;
+  padding:4px;
+  margin:2px;
+  font-family: Helvetica;
+  clear:right;
+}
+div.list_item a {
+  text-decoration:none;
+}
+div.list_item div.time {
+  float:right;
+  width:12em;
+  font-size:12px;
+  text-align:right;
+}
+
+div.list_item div.body {
+  text-weight:normal;
+  font-size:13px;
+  clear:left;
+}
+div.list_item div.icon {
+  float:left;
+  width:16px;
+}
+
+div.list_item div.icon img{
+  width:16px;
+  height:16px;
+}
+div.list_item div.head {
+  float:left;
+  width:20em;
+}
+
+div.read_list_item {
+background-color:#AAAAAA;
+} 

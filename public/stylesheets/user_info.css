@@ -1,0 +1,13 @@
+div.user_info {
+  float:right;
+  width:30em;
+  text-align:right;
+  margin:5px;
+}
+div.user_info a{
+  text-decoration:none;
+  background-color:#AA0000;
+  color:#FFFFFF;
+  padding:3px;
+  margin-top:5px;
+}
