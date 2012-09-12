@@ -9,10 +9,10 @@ class CreateAssigns < ActiveRecord::Migration
       t.boolean :read
       t.boolean :done
       t.integer :subscribe_threshold
-      t.index :parent_id
-      t.index :child_id
       t.timestamps
     end
+    add_index :assigns,:parent_id
+    add_index :assigns,:child_id
   end
 
   def self.down

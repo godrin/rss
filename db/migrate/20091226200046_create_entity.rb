@@ -9,10 +9,10 @@ class CreateEntity < ActiveRecord::Migration
       t.string :state
       t.timestamp :publication
       t.timestamps
-      t.index :url
-      t.index :type
-      t.index :name
     end
+    add_index :entities,:url
+    add_index :entities,:type
+    add_index :entities,:name
   end
 
   def self.down
